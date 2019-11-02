@@ -22,7 +22,7 @@ pre[class*="language-"]::before {
   background: hsl(30, 10%, 90%);
   top: 0;
   left: 0;
-  font-family: "Roboto", sans-serif;
+  font-family:  'Merriweather Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #555;
   content:attr(class);
@@ -36,7 +36,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 /*	text-shadow: 0 1px white;*/
-	font-family: 'Inconsolata', Monaco, Consolas, 'Andale Mono', monospace;
+font-family: 'Merriweather Sans', sans-serif;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
