@@ -2219,7 +2219,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: 'Merriweather Sans', sans-serif;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -2274,7 +2274,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'Merriweather Sans', sans-serif;
+
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -2365,7 +2366,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -2581,7 +2582,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 ul:not(.browser-default) {
@@ -2772,7 +2773,7 @@ video.responsive-video {
   color: rgba(255, 255, 255, 0.7);
   vertical-align: top;
   display: inline-block;
-  font-family: 'Material Icons';
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 25px;
@@ -4453,7 +4454,7 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -8924,7 +8925,7 @@ body {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 ul {
@@ -8932,7 +8933,7 @@ ul {
 }
 
 button {
-  font-family: sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .caption {
