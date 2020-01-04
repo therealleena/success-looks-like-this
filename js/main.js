@@ -1,33 +1,19 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message:"jkjdlsd",
-        stockImages:[
-            {
-                title:"Ladies in Coding",
-                price: 10,
-                img: "images/ss/6.jpg",
-                tag: "coding",
-            },
-            {
-                title:"Lady in Engineering",
-                price: 10,
-                img: "images/ss/3.jpg",
-                tag: "engineering",
-            },
-            {
-                title:"Lady in Business",
-                price: 10,
-                img: "images/ss/4.jpg",
-                tag: "business",
-            },
-            {
-                title:"Ladies in Business",
-                price: 10,
-                img: "images/ss/ladies-deal.jpg",
-                tag: "business",    
-            }
-            
-      ],
+        stockImages:[{}],
+    },
+    created: function () {
+        // `this` points to the vm instance
+        this.populateFromDb();
+    },
+    methods: {
+        populateFromDb: function () {
+            db.collection("stockImages").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    this.stockImages.push(doc.data())
+                });
+            });
+        }
     }
   })
