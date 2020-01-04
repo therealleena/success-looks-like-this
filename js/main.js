@@ -4,7 +4,7 @@ var app = new Vue({
         message:"jkjdlsd",
         stockImages:[
             {
-                title:"Lady in Coding",
+                title:"Ladies in Coding",
                 price: 10,
                 img: "images/ss/6.jpg",
                 tag: "coding",
@@ -24,7 +24,7 @@ var app = new Vue({
             {
                 title:"Ladies in Business",
                 price: 10,
-                img: "images/ss/7.jpg",
+                img: "images/ss/ladies-deal.jpg",
                 tag: "business",
             }
             
