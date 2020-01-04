@@ -19,6 +19,7 @@
   </head>
 
   <body>
+   <div id="app">
 
     <!-- Navbar and Header -->
     <nav class="nav-extended">
@@ -45,13 +46,14 @@
       </div>
 
       <!-- Fixed Masonry Filters -->
-      <div class="categories-wrapper purple lighten-1">
+      <div class="categories-wrapper purple lighten-1" id="app">
+        
         <div class="categories-container">
           <ul class="categories container">
             <li class="active"><a href="#all">All</a></li>
-            <li><a href="#polygon">Coding</a></li>
-            <li><a href="#bigbang">Engineering</a></li>
-            <li><a href="#sacred">Computer Science</a></li>
+            <li><a href="#coding">Coding</a></li>
+            <li><a href="#engineering">Engineering</a></li>
+            <li><a href="#business">Business</a></li>
           </ul>
         </div>
       </div>
@@ -70,20 +72,21 @@
     <div id="portfolio" class="section gray">
       <div class="container">
         <div class="gallery row">
-          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter polygon">
+          
+          <div v-for="stockImage in stockImages">
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter" v-bind:class="stockImage.tag">
             <div class="gallery-curve-wrapper">
               <a class="gallery-cover gray">
-                <img class="responsive-img" src="http://placehold.it/350x250" alt="placeholder">
+                <img class="responsive-img" v-bind:src="stockImage.img" alt="placeholder">
               </a>
               <div class="gallery-header">
-                <span>Engineering</span>
+                <span> {{stockImage.title}}</span>
               </div>
               <div class="gallery-body" >
                 <div class="title-wrapper">
-                  <h3>Engineering</h3>
-                  <span class="price">$29.99</span>
+                  <h3>{{stockImage.title}}</h3>
+                  <span class="price">${{stockImage.price}}</span>
                 </div>
-<
                 <p class="description"></p>
                 <p class="description"></p>
 
@@ -106,6 +109,10 @@
               </div>
             </div>
           </div>
+        </div>
+
+
+
           <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter polygon">
             <div class="gallery-curve-wrapper">
               <a class="gallery-cover gray">
@@ -369,7 +376,7 @@ Ea salvia adipisicing vegan man bun. Flexitarian cupidatat skateboard flannel. D
 
     </div><!-- /.container -->
 
-
+    </div>
     <!-- Core Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
