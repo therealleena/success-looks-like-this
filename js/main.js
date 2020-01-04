@@ -25,7 +25,7 @@ var app = new Vue({
                 title:"Ladies in Business",
                 price: 10,
                 img: "images/ss/ladies-deal.jpg",
-                tag: "business",
+                tag: "business",    
             }
             
       ],
