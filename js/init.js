@@ -1,3 +1,5 @@
+var initialiseGrid = null;
+
 (function($){
   $(function(){
 
@@ -65,22 +67,39 @@
 
 
     // Masonry Grid
-    var $masonry = $('.gallery');
-    $masonry.masonry({
-      // set itemSelector so .grid-sizer is not used in layout
-      itemSelector: '.gallery-filter',
-      // use element for option
-      columnWidth: '.gallery-filter',
-      // no transitions
-      transitionDuration: 0
-    });
-    // layout Masonry after each image loads
-    $masonry.imagesLoaded(function() {
-      $masonry.masonry('layout');
-    });
-    $('a.filter').click(function (e) {
-      e.preventDefault();
-    });
+    initialiseGrid = () => {
+      var $masonry = $('.gallery');
+      $masonry.masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.gallery-filter',
+        // use element for option
+        columnWidth: '.gallery-filter',
+        // no transitions
+        transitionDuration: 0
+      });
+      // layout Masonry after each image loads
+      $masonry.imagesLoaded(function() {
+        $masonry.masonry('layout');
+      });
+      $('a.filter').click(function (e) {
+        e.preventDefault();
+      });
+
+
+      $('.gallery-expand').galleryExpand({
+        onShow: onShow,
+        dynamicRouting: true,
+      });
+  
+      $('.blog .gallery-expand').galleryExpand({
+        onShow: onShow,
+        dynamicRouting: true,
+        fillScreen: true,
+        inDuration: 500,
+      });
+  
+    }
+    
 
 
 
@@ -100,17 +119,5 @@
         padding: 10
       });
     };
-    $('.gallery-expand').galleryExpand({
-      onShow: onShow,
-      dynamicRouting: true,
-    });
-
-    $('.blog .gallery-expand').galleryExpand({
-      onShow: onShow,
-      dynamicRouting: true,
-      fillScreen: true,
-      inDuration: 500,
-    });
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space
