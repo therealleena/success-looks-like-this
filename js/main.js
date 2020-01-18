@@ -1,10 +1,49 @@
 var app = new Vue({
     el: '#app',
     data: {
-        stockImages:[
-            {"img":"https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Flady-engineering.jpg?alt=media&token=1e6c7b85-02ed-4551-8285-02aea6682b34","price":10,"tag":"engineering","title":"Lady in Engineering"},
-        ],
-        isLoading:false
+        stockImages: [],
+        // stockImages: [{
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business.jpg?alt=media&token=0b4dd173-8c3c-4806-a04a-b175ee55eb07",
+        //     price: 12,
+        //     tag: "business",
+        //     title: "Ladies in business"
+        // }, {
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business2.jpg?alt=media&token=bb1f2057-16ae-4755-99a3-451d218a9fc8",
+        //     price: 10,
+        //     tag: "business",
+        //     title: "ladies in business2"
+        // },{
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business.jpg?alt=media&token=0b4dd173-8c3c-4806-a04a-b175ee55eb07",
+        //     price: 12,
+        //     tag: "business",
+        //     title: "Ladies in business"
+        // }, {
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business2.jpg?alt=media&token=bb1f2057-16ae-4755-99a3-451d218a9fc8",
+        //     price: 10,
+        //     tag: "business",
+        //     title: "ladies in business2"
+        // },{
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business.jpg?alt=media&token=0b4dd173-8c3c-4806-a04a-b175ee55eb07",
+        //     price: 12,
+        //     tag: "business",
+        //     title: "Ladies in business"
+        // }, {
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business2.jpg?alt=media&token=bb1f2057-16ae-4755-99a3-451d218a9fc8",
+        //     price: 10,
+        //     tag: "business",
+        //     title: "ladies in business2"
+        // },{
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business.jpg?alt=media&token=0b4dd173-8c3c-4806-a04a-b175ee55eb07",
+        //     price: 12,
+        //     tag: "business",
+        //     title: "Ladies in business"
+        // }, {
+        //     img: "https://firebasestorage.googleapis.com/v0/b/success-looks-like-this.appspot.com/o/codette-shutterstock%2Fladies-doing-business2.jpg?alt=media&token=bb1f2057-16ae-4755-99a3-451d218a9fc8",
+        //     price: 10,
+        //     tag: "business",
+        //     title: "ladies in business2"
+        // }],
+        isLoading: true
     },
     created: function () {
         // `this` points to the vm instance
@@ -14,15 +53,15 @@ var app = new Vue({
         populateFromDb: function () {
             const stockImagesFromDb = []
             db.collection("stockImages").get().then((querySnapshot) => {
-                this.isLoading=true;
+                this.isLoading = true;
                 querySnapshot.forEach((doc) => {
                     stockImagesFromDb.push(doc.data())
                 });
-            }).then(()=> {
-                this.stockImages = [...this.stockImages, stockImagesFromDb];
-                console.log("this.stockImages", JSON.stringify(this.stockImages))
-                this.isLoading=false;
+            }).then(() => {
+                initialiseGrid();
+                this.stockImages = stockImagesFromDb;
+                this.isLoading = false;
             });
         }
     }
-  })
+})

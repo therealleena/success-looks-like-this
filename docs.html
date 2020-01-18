@@ -1,142 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Gallery</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Lato Font -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <title>The Codette Project</title>
 
-    <!-- Stylesheet -->
-    <link href="css/gallery-materialize.css" rel="stylesheet">
+  <!-- Lato Font -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link href="css/gallery-materialize.css" rel="stylesheet">
 
-    <!-- Prism -->
-    <link href="css/prism.css" rel="stylesheet">
-  </head>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <body class="doc">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/jpg" href="images/ss/favicon.ico"/>
 
-    <!-- Navbar and Header -->
-    <nav class="nav-extended ">
-      <div class="nav-background">
-        <div class="pattern active" style="background-image: url('images/ss/codette-girls.png');"></div>
+  <!-- Prism -->
+  <link href="css/prism.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Yesteryear&display=swap" rel="stylesheet">
+</head>
+
+<body class="doc">
+
+  <!-- Navbar and Header -->
+  <nav class="nav-extended ">
+    <div class="nav-background">
+      <div class="pattern active" style="background-image: url('images/ss/codette-girls.png');"></div>
+    </div>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo"><img src="images/ss/codette-logo-retina.png" width="200"></i></a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+
+
+        <li class="active"><a href="docs.html">About</a></li>
+
+      </ul>
+      <!-- Dropdown Structure -->
+
+
+      <div class="nav-header center">
+        <h1> ABOUT</h1>
+        <div class="tagline">THIS WEBSITE</div>
       </div>
-      <div class="nav-wrapper container">
-        <a href="index.html" class="brand-logo"><img src="images/ss/codette-logo-retina.png" width="200"></i></a>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">Home</a></li>
-         
-         
-          <li class="active"><a href="docs.html">About</a></li>
-          
-        </ul>
-        <!-- Dropdown Structure -->
-        
+    </div>
+  </nav>
+  <ul class="sidenav" id="nav-mobile">
+    <li><a href="index.html"><i class="material-icons">camera</i>Gallery</a></li>
+    <li><a href="index-dark.html"><i class="material-icons">brightness_3</i>Dark Theme</a></li>
+    <li><a href="blog.html"><i class="material-icons">edit</i>Blog</a></li>
+    <li class="active"><a href="docs.html"><i class="material-icons">school</i>Docs</a></li>
+    <li><a href="full-header.html"><i class="material-icons">fullscreen</i>Fullscreen Header</a></li>
+    <li><a href="horizontal.html"><i class="material-icons">swap_horiz</i>Horizontal Style</a></li>
+    <li><a href="no-image.html"><i class="material-icons">texture</i>No Image Expand</a></li>
+  </ul>
 
-        <div class="nav-header center">
-          <h1> ABOUT</h1>
-          <div class="tagline">Learn how to do stuff</div>
-        </div>
-      </div>
-    </nav>
-    <ul class="sidenav" id="nav-mobile">
-      <li><a href="index.html"><i class="material-icons">camera</i>Gallery</a></li>
-      <li><a href="index-dark.html"><i class="material-icons">brightness_3</i>Dark Theme</a></li>
-      <li><a href="blog.html"><i class="material-icons">edit</i>Blog</a></li>
-      <li class="active"><a href="docs.html"><i class="material-icons">school</i>Docs</a></li>
-      <li><a href="full-header.html"><i class="material-icons">fullscreen</i>Fullscreen Header</a></li>
-      <li><a href="horizontal.html"><i class="material-icons">swap_horiz</i>Horizontal Style</a></li>
-      <li><a href="no-image.html"><i class="material-icons">texture</i>No Image Expand</a></li>
-    </ul>
-
-    <div id="documentation" class="section gray">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 l9">
-            <div id="gallery-expand" class="scrollspy">
-              <h3>Team members</h3>
-              <p class="caption">We are from Madrasah Al-Maarif Al-Islamiah. We coded this  
-                as our final project for Code Hero.
-              </p>
-
-              <div class="gallery row">
-                <div class="col m6 s12 gallery-expand">
-                  <div class="gallery-curve-wrapper">
-                    <a class="gallery-cover gray">
-                      <img class="responsive-img" src="http://placehold.it/400x300" alt="placeholder">
-                    </a>
-                    <div class="gallery-header">
-                      <span>Gallery Link</span>
-                    </div>
-                    <div class="gallery-body">
-                      <div class="title-wrapper">
-                        <h3>Grapefruit</h3>
-                        <span class="price">$14.99</span>
-                      </div>
-                    </div>
-                    <div class="gallery-action">
-                      <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+  <div id="documentation" class="section gray">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l9">
+          <br id="gallery-expand" class="scrollspy">
+            <h3>About This Website</h3>
+            <p class="caption">This website is made to showcase ladies performing jobs such as coding, enginering
+              and business. 
+              These jobs are often performed by men, we wanted to showcase that ladies are also able to perform the
+              exact
+              same jobs.
+            </p>
+            <br></br>
+            <div class="gallery row">
+              <div class="col m6 s12 gallery-expand">
+                <div class="gallery-curve-wrapper">
+                  <a class="gallery-cover gray">
+                    <img class="responsive-img" src="images/ss/Grp pic1.jpg" width="200">
+                  </a>
+                  <div class="gallery-header">
+                    
+                    <span>Fathona,Husna,Azma and Mentor Hazirah</span>
+                  </div>
+                  <div class="gallery-body">
+                    <div class="title-wrapper">
+                      <h3>Grapefruit</h3>
+                      <span class="price">$14.99</span>
                     </div>
                   </div>
-                </div>
-                <div class="col m6 s12">
-                  <h5>Default Transition</h5>
-                  <p class="caption">Image is translated across the screen.</p>
+                  <div class="gallery-action">
+                    <a class="btn-floating btn-large waves-effect waves-light"><i
+                        class="material-icons">favorite</i></a>
+                  </div>
                 </div>
               </div>
-              <div class="gallery row">
-                <div class="col m6 s12 gallery-horizontal gallery-expand">
-                  <div class="gallery-curve-wrapper">
-                    <a class="gallery-cover gray" style="height: 250px; width: 170px;">
-                      <img src="http://placehold.it/170x250">
-                    </a>
-                    <div class="gallery-header">
-                      <h4>Cave</h4>
-                      <p>Literally venmo before they sold out, DIY heirloom forage polaroid offal yr pop-up selfies health goth.</p>
-                    </div>
-                    <div class="gallery-body">
-                      <div class="title-wrapper">
-                        <h3>Cave</h3>
-                        <span class="price">$4.99</span>
-                      </div>
-                    </div>
-                    <div class="gallery-action">
-                      <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              <div class="col m6 s12">
+
+                <p class="caption">  </p>
+              </div>
+            </div>
+            <div class="gallery row">
+              <div class="col m6 s12 gallery-expand">
+                <div class="gallery-curve-wrapper">
+                  <a class="gallery-cover gray"></a>
+                    <img  class="responsive-img" src="images/ss/home-fb.png" width="800">
+                  </a>
+                
+                  <div class="gallery-body">
+                    <div class="title-wrapper">
+                      <h3>Cave</h3>
+                      <span class="price">$4.99</span>
                     </div>
                   </div>
+                  <div class="gallery-action">
+                    <a class="btn-floating btn-large waves-effect waves-light"><i
+                        class="material-icons">favorite</i></a>
+                  </div>
                 </div>
-                <div class="col m6 s12">
-                  <h5>Horizontal Style</h5>
-                 
-                
-                  
-          <div id="filter" class="scrollspy">
-              <h3>Filtering</h3>
-              <p class="caption">
-
-          
-        </div>
-      </div>
-    </div><!-- /.container -->
+              </div>
+              <div class="col m6 s12">
+                <h5>Codette's Social Cause:</h5>
 
 
-    <!-- Core Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/prism.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/color-thief.min.js"></script>
-    <script src="js/galleryExpand.js"></script>
-    <script src="js/docs-init.js"></script>
 
-  </body>
+                <div id="filter" class="scrollspy">
+                  <h3>Empowering minority woman with awareness & access to tech</h3>
+                  <p class="caption">
+
+
+                </div>
+              </div>
+            </div><!-- /.container -->
+
+
+            <!-- Core Javascript -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="js/prism.js"></script>
+            <script src="js/imagesloaded.pkgd.min.js"></script>
+            <script src="js/masonry.pkgd.min.js"></script>
+            <script src="js/materialize.min.js"></script>
+            <script src="js/color-thief.min.js"></script>
+            <script src="js/galleryExpand.js"></script>
+            <script src="js/docs-init.js"></script>
+
+</body>
+
 </html>
