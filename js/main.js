@@ -51,16 +51,15 @@ var app = new Vue({
     },
     methods: {
         populateFromDb: function () {
-            const stockImagesFromDb = []
             db.collection("stockImages").get().then((querySnapshot) => {
                 this.isLoading = true;
                 querySnapshot.forEach((doc) => {
-                    stockImagesFromDb.push(doc.data())
+                    this.stockImages.push(doc.data())
                 });
             }).then(() => {
-                initialiseGrid();
-                this.stockImages = stockImagesFromDb;
                 this.isLoading = false;
+
+                initialiseGrid();
             });
         }
     }

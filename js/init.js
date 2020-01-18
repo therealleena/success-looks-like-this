@@ -97,12 +97,8 @@ var initialiseGrid = null;
         fillScreen: true,
         inDuration: 500,
       });
-  
     }
-    
-
-
-
+  
     // Contact Form Icon
     $("form .form-control").focus(function() {
       $(this).siblings("label").first().children("i").first().css({"color": "#aaa", "left": 0});
